@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/screens/home/text_section.dart';
+import 'image_banner.dart';
+import 'text_section.dart';
 
 class LocationDetail extends StatelessWidget{
   @override
@@ -12,6 +13,7 @@ class LocationDetail extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children:[
+          ImageBanner("assets/images/kiyomizu-dera.jpg"),
           TextSection(Colors.lightGreen),
           TextSection(Colors.amber),
           TextSection(Colors.yellowAccent),
