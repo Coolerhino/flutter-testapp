@@ -14,9 +14,9 @@ class LocationDetail extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children:[
           ImageBanner("assets/images/kiyomizu-dera.jpg"),
-          TextSection(Colors.lightGreen),
-          TextSection(Colors.amber),
-          TextSection(Colors.yellowAccent),
+          TextSection("Summary 1", "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."),
+          TextSection("Summary 2", "Lorem ipsum 2"),
+          TextSection("Summary 3", "Lorem ipsum 3"),
         ]
       )
     );
