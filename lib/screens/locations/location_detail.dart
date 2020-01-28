@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'image_banner.dart';
-import 'text_section.dart';
+import '../home/image_banner.dart';
+import '../home/text_section.dart';
 import '../../models/location.dart';
 
 class LocationDetail extends StatelessWidget {
+  final int _locationId;
+
+  LocationDetail(this._locationId);
+
   @override
   Widget build(BuildContext context) {
-    final locations = Location.fetchAll();
-    final location = locations.first;
+    final location = Location.fetchById(_locationId);
 
     return Scaffold(
         appBar: AppBar(
@@ -17,7 +20,7 @@ class LocationDetail extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              ImageBanner("assets/images/kiyomizu-dera.jpg"),
+              ImageBanner(location.imagePath),
             ]..addAll(textSections(location)))
     );
   }
